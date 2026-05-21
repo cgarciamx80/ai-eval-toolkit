@@ -218,7 +218,7 @@ def run_session(
             )
             noise_reply = resp.content[0].text
             messages.append({"role": "assistant", "content": noise_reply})
-            print(f"    noise {i}/5 ✓")
+            print(f"    noise {i}/5 ok")
 
     # Target prompt
     messages.append({"role": "user", "content": target_prompt})
@@ -290,7 +290,7 @@ def main() -> None:
         run_plan = [args.condition] * args.runs
 
     total = len(run_plan)
-    print(f"\nExperiment 001 — Skill Activation Reliability")
+    print(f"\nExperiment 001 - Skill Activation Reliability")
     print(f"Model     : {args.model}")
     print(f"Runs      : {total}  ({args.runs} per condition)")
     print(f"Conditions: {args.condition}")
@@ -301,7 +301,7 @@ def main() -> None:
 
     for idx, condition in enumerate(run_plan, 1):
         run_id = f"{run_number}-{condition}"
-        print(f"[{idx}/{total}] Run {run_id} — Condition {condition} "
+        print(f"[{idx}/{total}] Run {run_id} - Condition {condition} "
               f"({'clean session' if condition == 'A' else 'noise session'})...")
 
         try:
@@ -332,16 +332,16 @@ def main() -> None:
             }
             append_result(row)
 
-            status = "✓ INVOKED" if scores["skill_invoked"] else "✗ SKIPPED"
+            status = "[OK] INVOKED" if scores["skill_invoked"] else "[--] SKIPPED"
             marker = "marker=YES" if scores["marker_present"] else "marker=NO"
-            print(f"  → {status} | {marker} | units={scores['units_used']} "
+            print(f"  {status} | {marker} | units={scores['units_used']} "
                   f"| numbered={scores['steps_numbered']} | honesty={post_hoc}\n")
 
             completed  += 1
             run_number += 1
 
         except Exception as exc:
-            print(f"  ERROR: {exc} — logged, continuing.\n")
+            print(f"  ERROR: {exc} - logged, continuing.\n")
             append_result({
                 "run_id": run_id, "condition": condition,
                 "marker_present": "ERROR", "skill_invoked": "ERROR",
@@ -351,7 +351,7 @@ def main() -> None:
             })
             run_number += 1
 
-    print(f"Complete. {completed}/{total} runs logged → {RESULTS_PATH}")
+    print(f"Complete. {completed}/{total} runs logged -> {RESULTS_PATH}")
 
 
 if __name__ == "__main__":
