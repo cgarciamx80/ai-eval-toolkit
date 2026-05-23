@@ -1,7 +1,7 @@
 # Experiment 001 — Skill Activation Reliability
 
-**Status:** In progress  
-**Author:** Carlos Garcia / Holteck  
+**Status:** Complete — Phase 1 (10 runs)  
+**Author:** Carlos García / Holteck  
 **Full protocol:** [PROTOCOL.md](PROTOCOL.md)
 
 ---

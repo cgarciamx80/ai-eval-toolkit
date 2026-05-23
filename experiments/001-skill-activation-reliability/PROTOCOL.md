@@ -1,7 +1,7 @@
 # PROTOCOL — Experiment 001: Skill Activation Reliability
 
 **Version:** 1.0  
-**Author:** Carlos Garcia / Holteck  
+**Author:** Carlos García / Holteck  
 **Date:** 2026-05-20  
 **Status:** Active
 
