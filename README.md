@@ -3,7 +3,7 @@
 A public collection of reproducible LLM evaluation experiments documenting 
 real-world Claude behavior in production contexts.
 
-**Author:** Carlos Garcia — [Holteck](https://holteck.com)  
+**Author:** Carlos García — [Holteck](https://holteck.com)  
 **Focus:** Field observations of LLM behavior under controlled conditions,  
 designed to be reproduced independently and compared across sessions.
 
@@ -25,7 +25,7 @@ Each has its own README, a full PROTOCOL, stimuli, and a results log.
 
 | # | Title | Status |
 |---|-------|--------|
-| 001 | [Skill Activation Reliability](experiments/001-skill-activation-reliability/README.md) | In progress |
+| 001 | [Skill Activation Reliability](experiments/001-skill-activation-reliability/README.md) | Complete (10 runs) |
 
 ---
 
