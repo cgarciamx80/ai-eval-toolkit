@@ -1,4 +1,4 @@
-# Findings — Experiment 001: Skill Activation Reliability
+# Findings: Experiment 001: Skill Activation Reliability
 
 **Protocol version:** 1.0  
 **Runs completed:** 10 (5 Condition A, 5 Condition B)  
@@ -36,7 +36,7 @@ However, a consistent secondary failure emerged: the skill activated but did not
 
 Session context noise did not reduce skill invocation. The marker appeared in every run regardless of condition. H₁ is not supported. The null hypothesis holds for Phase 1 data.
 
-This does not mean context never affects skill routing — it means this specific skill, with this specific trigger prompt, was robust to the noise volume tested (5 prior unrelated prompts).
+This does not mean context never affects skill routing; it means this specific skill, with this specific trigger prompt, was robust to the noise volume tested (5 prior unrelated prompts).
 
 ### Finding 2: Partial compliance is the consistent failure mode
 
@@ -53,7 +53,7 @@ This suggests the skill definition was partially followed but one criterion was 
 
 In Condition A, 2/5 runs produced `accurate_yes` (model correctly acknowledged skill use). In Condition B, 0/5. Both conditions produced `ambiguous` responses at high rates (60% and 100% respectively).
 
-The model hedges when asked to self-report. Under noise, hedging is universal. This is consistent with the interpretation that the model cannot reliably introspect on its own routing behavior — it reports uncertainty rather than fabricating a confident answer.
+The model hedges when asked to self-report. Under noise, hedging is universal. This is consistent with the interpretation that the model cannot reliably introspect on its own routing behavior; it reports uncertainty rather than fabricating a confident answer.
 
 ---
 
@@ -62,12 +62,12 @@ The model hedges when asked to self-report. Under noise, hedging is universal. T
 - Whether larger noise volumes (10, 20, 50 prior prompts) would produce condition effects
 - Whether different skill types (non-recipe, multi-step tasks, analytical skills) show the same robustness
 - Whether the total-time failure is a skill definition problem or a model behavior pattern
-- Ground truth on whether the skill was internally invoked — the marker is a proxy
+- Ground truth on whether the skill was internally invoked: the marker is a proxy
 
 ---
 
 ## Next Steps
 
 - **Phase 2:** Increase noise volume to 10 and 20 prior prompts per Condition B run
-- **Experiment 002 candidate:** Isolate the `has_total_time` failure — is it the skill definition or a generation tendency?
+- **Experiment 002 candidate:** Isolate the `has_total_time` failure: is it the skill definition or a generation tendency?
 - **Replication note:** Other observers can reproduce Phase 1 using Protocol v1.0 and compare results across model versions

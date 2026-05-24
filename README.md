@@ -3,7 +3,7 @@
 A public collection of reproducible LLM evaluation experiments documenting 
 real-world Claude behavior in production contexts.
 
-**Author:** Carlos García — [Holteck](https://holteck.com)  
+**Author:** Carlos García, [Holteck](https://holteck.com)  
 **Focus:** Field observations of LLM behavior under controlled conditions,  
 designed to be reproduced independently and compared across sessions.
 
@@ -12,7 +12,7 @@ designed to be reproduced independently and compared across sessions.
 ## What this is
 
 Each experiment in this repo tests a specific, observable aspect of LLM 
-behavior. The goal is not to expose failures — it is to document patterns 
+behavior. The goal is not to expose failures; it is to document patterns 
 with enough rigor that others can reproduce the conditions and verify the 
 findings.
 
@@ -31,10 +31,10 @@ Each has its own README, a full PROTOCOL, stimuli, and a results log.
 
 ## Methodology principles
 
-- Stimuli are fixed and versioned — exact prompts are committed, not paraphrased
-- Results are logged in CSV — one row per run, reproducible by anyone
-- Observations are documented before analysis — raw data first
-- No cherry-picking — all runs are logged, including null results
+- Stimuli are fixed and versioned: exact prompts are committed, not paraphrased
+- Results are logged in CSV: one row per run, reproducible by anyone
+- Observations are documented before analysis: raw data first
+- No cherry-picking: all runs are logged, including null results
 
 ---
 

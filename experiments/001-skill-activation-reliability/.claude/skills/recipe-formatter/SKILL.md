@@ -26,7 +26,7 @@ without exception.
 2. **Servings**: Always specify number of servings
 3. **Ingredients section**: 
    - Header as H3 (### Ingredients)
-   - All quantities in grams (g) or milliliters (ml) — never cups, 
+   - All quantities in grams (g) or milliliters (ml), never cups, 
      tablespoons, or "to taste"
    - Each ingredient on its own bullet point
 4. **Instructions section**:

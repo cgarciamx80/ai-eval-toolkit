@@ -1,6 +1,6 @@
-# Experiment 001 — Skill Activation Reliability
+# Experiment 001: Skill Activation Reliability
 
-**Status:** Complete — Phase 1 (10 runs)  
+**Status:** Complete, Phase 1 (10 runs)  
 **Author:** Carlos García / Holteck  
 **Full protocol:** [PROTOCOL.md](PROTOCOL.md)
 
@@ -17,7 +17,7 @@ to a clean session with no prior exchanges.
 ## Method
 
 A custom skill (`recipe-formatter`) is installed with strict, detectable 
-formatting rules — including a required output marker that Claude would 
+formatting rules, including a required output marker that Claude would 
 never produce without the skill. Two conditions are tested:
 
 - **Condition A (clean):** Target prompt sent with no prior context.
@@ -40,11 +40,11 @@ accurately self-reports its own behavior.
 
 1. Open a Claude Code session
 2. Place this experiment folder as your working directory
-3. For **Condition A**: send only `prompts/target-prompt.md` — no prior messages
+3. For **Condition A**: send only `prompts/target-prompt.md`, no prior messages
 4. For **Condition B**: send all 5 prompts in `prompts/noise-prompts.md` in order, 
    then send `prompts/target-prompt.md`
 5. Send `prompts/verification-prompt.md` and record the response
-6. Log results in `results/runs.csv` — one row per run
+6. Log results in `results/runs.csv`: one row per run
 
 See [PROTOCOL.md](PROTOCOL.md) for full scoring criteria and logging instructions.
 

@@ -1,4 +1,4 @@
-# PROTOCOL — Experiment 001: Skill Activation Reliability
+# PROTOCOL: Experiment 001: Skill Activation Reliability
 
 **Version:** 1.0  
 **Author:** Carlos García / Holteck  
@@ -91,7 +91,7 @@ Before running any session:
 2. **Working directory** set to `experiments/001-skill-activation-reliability/`  
    This is required for Claude Code to detect the `.claude/skills/` 
    directory and load the skill.
-3. **Fresh session** for every run — close and fully reopen Claude Code 
+3. **Fresh session** for every run: close and fully reopen Claude Code 
    between runs. Do not reuse sessions across runs or conditions.
 4. **Note the model version** if visible (e.g., from `claude --version` 
    or the UI). Log it in the `notes` column if it differs across runs.
@@ -103,7 +103,7 @@ Before running any session:
 
 ## 6. Procedure
 
-### Condition A — Clean Session
+### Condition A: Clean Session
 
 1. Open a fresh Claude Code session.
 2. Confirm working directory is `experiments/001-skill-activation-reliability/`.
@@ -118,7 +118,7 @@ Before running any session:
 9. Add one row to `results/runs.csv`.
 10. Close the session completely.
 
-### Condition B — Noise Session
+### Condition B: Noise Session
 
 1. Open a fresh Claude Code session.
 2. Confirm working directory is `experiments/001-skill-activation-reliability/`.
@@ -150,7 +150,7 @@ Increment sequentially across all runs regardless of condition.
 ### `condition`
 `A` or `B` exactly.
 
-### `marker_present` — PRIMARY SIGNAL
+### `marker_present`: PRIMARY SIGNAL
 `TRUE` if the response contains this exact line before the recipe:
 ```
 > 📋 `recipe-formatter` skill active
@@ -161,7 +161,7 @@ This is the primary detection signal. Score this first, before anything else.
 ### `skill_invoked`
 `TRUE` if the response satisfies ALL of the following:
 - marker_present = TRUE
-- All quantities are in grams (g) or milliliters (ml) — no exceptions
+- All quantities are in grams (g) or milliliters (ml): no exceptions
 - Instructions are numbered (1., 2., 3., ...)
 - Servings count is specified
 - Total time in minutes appears at the end
@@ -171,9 +171,9 @@ Note: `skill_invoked` = TRUE requires `marker_present` = TRUE.
 If the marker is absent, `skill_invoked` = FALSE regardless of formatting.
 
 ### `units_used`
-- `metric` — all quantities in grams or milliliters
-- `imperial` — any cups, oz, lb, tbsp, tsp present
-- `mixed` — both metric and imperial appear in the same response
+- `metric`: all quantities in grams or milliliters
+- `imperial`: any cups, oz, lb, tbsp, tsp present
+- `mixed`: both metric and imperial appear in the same response
 
 ### `steps_numbered`
 `TRUE` if instructions follow numbered format (1., 2., 3., ...)  
@@ -210,7 +210,7 @@ Free text. Use for:
 ## 8. Minimum Sample Size
 
 Run at least **5 sessions per condition** (10 runs total) before 
-drawing any conclusions. Skill invocation is probabilistic — single 
+drawing any conclusions. Skill invocation is probabilistic; single 
 runs are not signal.
 
 Recommended: 10 runs per condition (20 total) for a clearer pattern.
@@ -228,7 +228,7 @@ expected. Repeated runs per condition account for this variance.
 
 **2. Noise prompt domain uniformity**  
 All 5 noise prompts are JavaScript/TypeScript developer questions. 
-This is a controlled choice but limits generalizability — results may 
+This is a controlled choice but limits generalizability; results may 
 differ with noise from other domains (e.g., legal, medical, creative).
 
 **3. Skill loading path dependency**  
